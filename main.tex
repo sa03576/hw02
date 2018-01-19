@@ -1,0 +1,129 @@
+\documentclass[addpoints]{exam}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 113 Discrete Mathematics}{Homework I}{Spring 2018}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+% \qformat{{\large\bf \thequestion. \thequestiontitle}\hfill[\totalpoints\ points]}
+\boxedpoints
+\printanswers
+
+\title{Habib University\\CS 113 Discrete Mathematics\\Spring 2018}
+\author{Don't Grade Me}  % replace with your ID, e.g. oy02945
+\date{Homework 1}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+
+
+\question
+
+%Type instructions for short questions here
+
+\begin{parts}
+
+  
+  \part[5] You are given four cards each of which has a number on one side and a letter on another. You place them on a table in front of you and the four cards read {\it B 5 2 J}. Which cards would you have to turn over, to test the following rule? Explain your choice.
+  \begin{center}
+    If there is a 5 on one side, there is a J on the other side.
+  \end{center}
+
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+  
+  \part[5] Express the following statement with a propositional function $P(x)$, where $x$ $\varepsilon \{1, 2, 3, 4, 5\}$, without using quantifiers, instead using only logical operators $\neg$, $\vee$ , and $\wedge$. 
+  \begin{center}
+    $\exists x (\neg P(x)) \wedge \forall x (( x \neq 2) \rightarrow P(x))$
+  \end{center}
+  
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+
+  \part[5] Let $F(x, y)$ be the statement {\it x can fool y}, where the domain consists of all people in the world. Use quantifiers to express the following statement.
+  \begin{center}
+    There are exactly two people whom everybody can fool.
+  \end{center}
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+
+\end{parts}
+
+\question[10] Show that $(p\vee q) \wedge (\neg p \vee r)\rightarrow (q \vee r)$ is a tautology. You may not use a Truth Table. Show your reasoning.
+
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+
+\question[20] Suppose $A, B, C$ are sets. And $C \neq \emptyset$. Show that if $A \times B = C \times B$, then $A = B$.
+
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+\question For $S$ in the domain of a function $f^*$, let $f^*(S) = {f(x) : x\in S}$ where function $f(x)$ is in the domain of $x\in S$. Let $C$ and $D$ be subsets of the domain of $f^*$.
+  \begin{parts}
+    \part[20] Show that $f^* (C \cap D) \subseteq f^* (C) \cap f^* (D)$.
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+    \part[5] Give an example where equality does not hold in the previous part.
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+\end{parts}
+
+\question
+    Five guests were invited to an exclusive party at Dr. Harvey's mansion. However during the long dark night, the owner of the spectacular mansion Dr. Harvey was found dead in his office. The trouble is, every member of the party went to his office, each at a different time, with a different motive, and a different weapon. There was a fingerprint, a footprint, a blood drop, a note and a strand of hair found at the murder site. Forensics reveal that the suspect who entered the room at 10.30 pm did it. From their statements below, can you work out who killed Dr. Harvey? 
+
+Colonel Woody - ``I never left a footprint because a woman did. I entered the room before the person who took in the poison. I must say though, she was in there for a quarter of an hour before someone else went in"
+
+Lady Rose - ``Okay I admit it! I took in the revolver, even though my motive wasn't revenge. A man entered the room after me and his motive was either rage or blackmail. They all took their time about it, but no man took more than 40 minutes."
+
+Sir Tarantino - ``I did leave a fingerprint, but that doesn't explain why Professor Selma lost a hair, does it? Oh yes, the person who entered seventy minutes before me took in the lead pipe. Then there was the man with the dagger!"
+
+Reverend Spacey - ``I entered after a woman, who did not take in a rope, because the last person to visit him did. I was in there for over 35 minutes, confronting Dr. Harvey over my motive, which may I say wasn't greed or blackmail."
+
+Professor Selma - ``Yes, you caught me! My motive was jealousy, but it wasn't as bad as that man's blackmail motive, who entered at five minutes past ten. I entered before another man who left the incriminating clue of the blood drop."
+
+\begin{parts}
+  \part[20] For each suspect, write their testimony in the form of well-defined propositions, using quantifiers wherever possible, in addition to negations, disjunctions and conjunctions. You may use the following statements to construct your propositions:
+
+  \begin{tabular}{l@{ : }l}
+    Clue(x, y) & suspect x left clue y \\
+    Weapon(x, y) & suspect x used weapon y \\
+    Motive(x, y) & suspect x had motive y \\
+    Order(x,y,z) & suspect x entered y minutes before suspect z
+  \end{tabular}
+  \begin{solution}
+    % Write your solution here
+  \end{solution}
+
+  \part[10] Use your propositions to fill in the following table.
+
+  
+  \begin{tabular}{|l|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|}
+    \hline
+ & Weapon & Motive & Clue & Time \\\hline\hline
+Woody	& & & & \\\hline
+Rose	& & & & \\\hline
+Tarantino  & & & & \\\hline
+Spacey	& & & & \\\hline
+Selma	& & & & \\\hline
+\end{tabular}
+
+
+  
+\end{parts}
+
+\end{questions}
+
+\end{document}
