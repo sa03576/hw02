@@ -1,7 +1,7 @@
-%CS-113 S18 HW-1
-%Released: 19-Jan-2018
-%Deadline: 2-Feb-2018 7.00 pm
-%Authors: Abdullah Zafar, Osama Yousuf, Waqar Saleem
+%CS-113 S18 HW-2
+%Released: 2-Feb-2018
+%Deadline: 16-Feb-2018 7.00 pm
+%Authors: Abdullah Zafar, Emad bin Abid, Moonis Rashid, Abdul Rafay Mehboob, Waqar Saleem.
 
 
 \documentclass[addpoints]{exam}
@@ -10,18 +10,16 @@
 \pagestyle{headandfoot}
 \runningheadrule
 \runningfootrule
-\runningheader{CS 113 Discrete Mathematics}{Homework I}{Spring 2018}
+\runningheader{CS 113 Discrete Mathematics}{Homework II}{Spring 2018}
 \runningfooter{}{Page \thepage\ of \numpages}{}
 \firstpageheader{}{}{}
 
-% \qformat{{\large\bf \thequestion. \thequestiontitle}\hfill[\totalpoints\ points]}
 \boxedpoints
 \printanswers
-
-\title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 1}
-\author{$ <yourID> $}  % replace with your ID, e.g. oy02945
-\date{Homework 1}
-\date{Due: 2nd February, 2018}
+\usepackage{amsfonts,xcolor,graphicx,amsmath}
+\title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 2}
+\author{$<your ID>$}  % replace with your ID, e.g. oy02945
+\date{Due: 16th February, 2018}
 \begin{document}
 \maketitle
 
@@ -31,103 +29,131 @@
 
 \question
 
-%Type instructions for short questions here
+%Short Questions (25)
 
 \begin{parts}
 
   
-  \part[5] You are given four cards, each of which has a number on one side and a letter on another. You place them on a table in front of you and the four cards read {\it B 5 2 J}. Which cards would you have to turn over, to test the following rule? Explain your choice.
+  \part[5] Determine the domain, codomain and set of values for the following function to be 1) partial and 2) total: 
   \begin{center}
-    If there is a 5 on one side, there is a J on the other side.
+    $y=\sqrt{x}$
   \end{center}
 
   \begin{solution}
     % Write your solution here
   \end{solution}
   
-  \part[5] Express the following statement with a propositional function $P(x)$, where $x$ $\varepsilon \{1, 2, 3, 4, 5\}$, without using quantifiers, instead using only logical operators $\neg$, $\vee$ , and $\wedge$. 
-  \begin{center}
-    $\exists x (\neg P(x)) \wedge \forall x (( x \neq 2) \rightarrow P(x))$
-  \end{center}
+  \part[5] Explain whether $f$ is a function from the set of all bit strings to the set of integers if $f(S)$ is the smallest $i \in \mathbb{Z}$� such that the $i$th bit of S is 1 and $f(S) = 0$ when S is the empty string. 
   
   \begin{solution}
     % Write your solution here
   \end{solution}
 
-  \part[5] Let $F(x, y)$ be the statement {\it x can fool y}, where the domain consists of all people in the world. Use quantifiers to express the following statement:
-  \begin{center}
-    There are exactly two people whom everybody can fool.
-  \end{center}
+  \part[15] For $X,Y \in S$, explain why (or why not) the following define an equivalence relation on $S$:
+  \begin{subparts}
+    \subpart ``$X$ and $Y$ have been in class together"
+    \subpart ``$X$ and $Y$ rhyme"
+    \subpart ``$X$ is a subset of $Y$"
+  \end{subparts}
+
   \begin{solution}
     % Write your solution here
   \end{solution}
 
 \end{parts}
 
-\question[10] Show that $(p\vee q) \wedge (\neg p \vee r)\rightarrow (q \vee r)$ is a tautology, without use a truth table. Show your reasoning.
-
+%Long questions (75)
+\question[15] Let $B \subseteq Y$ and $A = f^{-1}(B)$. Prove that $f(A) \subseteq B$.
   \begin{solution}
     % Write your solution here
   \end{solution}
 
-\question[20] Suppose $A, B, C$ are sets. And $C \neq \emptyset$. Show that if $A \times C = B \times C$, then $A = B$.
+\question[15] Consider $[n] = \{1,2,3,...,n\}$ where $n \in \mathbb{N}$. Let $A$ be the set of subsets of $[n]$ that have even size, and let $B$ be the set of subsets of $[n]$ that have odd size. Establish a bijection from $A$ to $B$, thereby proving $|A| = |B|$. (Such a bijection is suggested below for $n = 3$) 
+
+\begin{center}
+\begin{tabular}{ c c c c c}
+ A & $\emptyset$ & $\{2,3\}$ & $\{1,3\}$ & $\{1,2\}$ \\ 
+ B & $\{3\}$ & $\{2\}$ & $\{1\}$ & $\{1,2,3\}$
+ 
+\end{tabular}
+\end{center}
 
   \begin{solution}
     % Write your solution here
   \end{solution}
-\question For $S$ in the domain of a function $f^*$, let $f^*(S) = \{ f(x) : x\in S \}$ where function $f(x)$ is in the domain of $x\in S$. Let $C$ and $D$ be subsets of the domain of $f^*$.
+  
+\question Mushrooms play a vital role in the biosphere of our planet. They also have recreational uses, such as in understanding the mathematical series below. A mushroom number, $M_n$, is a figurate number that can be represented in the form of a mushroom shaped grid of points. Here is $M_5=23$:
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=1.0]{m5_figurate.png}
+  \caption{Representation of $M_5$ mushroom}
+  \label{fig:mushroom_anatomy}
+\end{figure}
+
+We can draw $M_{n+1}$ recursively, for $n \geq 1$:
+\[ 
+    M_{n+1}=
+    \begin{cases} 
+      
+      Cap\;width(M_n) + 1,\;Cap\;height(M_n),\;Stem\;height(M_n) + 1 & n\;is\;even \\
+      
+      Cap\;width(M_n) + 1,\;Cap\;height(M_n)+1,\;Stem\;height(M_n) + 1 & n\;is\;odd \\
+      
+   \end{cases}
+\]
+
+Study the first five mushrooms carefully and make sure you can derive subsequent ones using the recurrence above.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{mushroom_series.png}
+  \caption{Representation of $M_1,M_2,M_3,M_4,M_5$ mushrooms}
+  \label{fig:mushroom_anatomy}
+\end{figure}
+
   \begin{parts}
-    \part[20] Show that $f^* (C \cap D) \subseteq f^* (C) \cap f^* (D)$.
+    \part[15] Derive a closed-form for $M_n$.
   \begin{solution}
     % Write your solution here
   \end{solution}
-    \part[5] Give an example where equality does not hold in the previous part.
+    \part[5] What is the height of the $20$th mushroom in the series? 
   \begin{solution}
     % Write your solution here
   \end{solution}
 \end{parts}
 
 \question
-    Five guests were invited to an exclusive party at Dr. Harvey's mansion. However during the long dark night, the scandalous Dr. Harvey was found dead in his office. The trouble is, every member of the party went to his office, each at a different time, with a different motive, and a different weapon. There was a fingerprint, a footprint, a blood drop, a note and a strand of hair found at the murder site. Forensics revealed that the suspect who entered the room at 10.30 pm did it. From their statements below, can you work out who killed Dr. Harvey? 
+    The Fibonacci series is an infinite array of integers, starting with $1$ and $2$ and defined recursively after that, for the $n$th term in the array, as $F(n) = F(n-1) + F(n-2)$. In this problem, we will count an interesting set derived from the Fibonacci recurrence.
+    
+The Wythoff array is an infinite 2D-array of integers where each row is formed from the Fibonnaci recurrence using starting numbers $n$ and $\left \lfloor{\phi(n+1)}\right \rfloor$ where $n \in \mathbb{N}$ and $\phi$ is the golden ratio $1.618$ (3 sf).
 
-Colonel Woody - ``I never left a footprint because a woman did. I entered the room before the person who took in the poison. I must say though, she was in there for a quarter of an hour before someone else went in."
+\begin{center}
+\begin{tabular}{c c c c c c c c}
+ \color{blue}1 & 2 & 3 & 5 & 8 & 13 & 21 & $\cdots$\\
+ 4 & \color{blue}7 & 11 & 18 & 29 & 47 & 76 & $\cdots$\\
+ 6 & 10 & \color{blue}16 & 26 & 42 & 68 & 110 & $\cdots$\\
+ 9 & 15 & 24 & \color{blue}39 & 63 & 102 & 165 & $\cdots$ \\
+ 12 & 20 & 32 & 52 & \color{blue}84 & 136 & 220 & $\cdots$ \\
+ 14 & 23 & 37 & 60 & 97 & \color{blue}157 & 254 & $\cdots$\\
+ 17 & 28 & 45 & 73 & 118 & 191 & \color{blue}309 & $\cdots$\\
+ $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & \color{blue}$\ddots$\\
+ 
 
-Lady Rose - ``Okay I admit it! I took in the revolver, even though my motive wasn't revenge. A man entered the room after me and his motive was either rage or blackmail. They all took their sweet time about it, but no man took more than 40 minutes."
-
-Sir Tarantino - ``I did leave a fingerprint, but that doesn't explain why Professor Selma lost a hair, does it? Oh yes, the person who entered seventy minutes before me took in the lead pipe. Then there was the man with the dagger!"
-
-Reverend Spacey - ``I entered after a woman, who did not take in a rope, because the last person to visit him did. I was in there for over 35 minutes, confronting Dr. Harvey over my motive, which may I say wasn't greed or blackmail."
-
-Professor Selma - ``Yes, you caught me! My motive was jealousy, but it wasn't as bad as that man's blackmail motive, who entered at five minutes past ten. I entered before another man who left the incriminating clue of the blood drop."
+\end{tabular}
+\end{center}
 
 \begin{parts}
-  \part[20] For each suspect, write their testimony in the form of several well-defined propositions, using quantifiers wherever possible, in addition to negations, disjunctions and conjunctions. You may use the following statements to construct your propositions:
+  \part[10] To begin, prove that the Fibonacci array is countable.
+ 
+    \begin{solution}
+    % Write your solution here
+  \end{solution}
+  \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Wythoff Array is countable. 
 
-  \begin{tabular}{l@{ : }l}
-    Clue(x, y) & suspect x left clue y \\
-    Weapon(x, y) & suspect x used weapon y \\
-    Motive(x, y) & suspect x had motive y \\
-    Order(x,y,z) & suspect x entered y minutes before suspect z
-  \end{tabular}
   \begin{solution}
     % Write your solution here
   \end{solution}
-
-  \part[10] Use your propositions from the previous part to fill in the following table:
-
-  
-  \begin{tabular}{|l|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|p{.15\textwidth}|}
-    \hline
- & Weapon & Motive & Clue & Time \\\hline\hline
-Woody	& & & & \\\hline
-Rose	& & & & \\\hline
-Tarantino  & & & & \\\hline
-Spacey	& & & & \\\hline
-Selma	& & & & \\\hline
-\end{tabular}
-
-
-  
 \end{parts}
 
 \end{questions}
