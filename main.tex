@@ -99,8 +99,8 @@ We can draw the mushroom that represents $M_{n+1}$ recursively, for $n \geq 1$:
 \[ 
     M_{n+1}=
     \begin{cases} 
-      (\textrm{Cap\_width}(M_n) + 1) + (\textrm{Stem\_height}(M_n) + 1) + \textrm{Cap\_height}(M_n)  & n \textrm{ is even} \\
-      (\textrm{Cap\_width}(M_n) + 1) + (\textrm{Stem\_height}(M_n) + 1)  + (\textrm{Cap\_height}(M_n)+1) & n \textrm{ is odd}  \\      
+      f(\textrm{Cap\_width}(M_n) + 1, \textrm{Stem\_height}(M_n) + 1, \textrm{Cap\_height}(M_n))  & n \textrm{ is even} \\
+      f(\textrm{Cap\_width}(M_n) + 1, \textrm{Stem\_height}(M_n) + 1, \textrm{Cap\_height}(M_n)+1) & n \textrm{ is odd}  \\      
    \end{cases}
 \]
 
@@ -159,5 +159,4 @@ The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.ht
 
 \end{questions}
 
-\end{document
-}
+\end{document}
