@@ -37,11 +37,7 @@
 \begin{parts}
 
   
-  \part[5] Determine the domain, codomain and set of values for the following function to be: 
-  \begin{subparts}
-  \subpart Partial
-  \subpart Total
-  \end{subparts}
+  \part[5] Determine the domain, codomain and set of values for the following function to be 1) partial and 2) total: 
   \begin{center}
     $y=\sqrt{x}$
   \end{center}
@@ -103,8 +99,8 @@ We can draw the mushroom that represents $M_{n+1}$ recursively, for $n \geq 1$:
 \[ 
     M_{n+1}=
     \begin{cases} 
-      (\textrm{Cap\_width}(M_n) + 1) + (\textrm{Stem\_height}(M_n) + 1) + \textrm{Cap\_height}(M_n)  & n \textrm{ is even} \\
-      (\textrm{Cap\_width}(M_n) + 1) + (\textrm{Stem\_height}(M_n) + 1)  + (\textrm{Cap\_height}(M_n)+1) & n \textrm{ is odd}  \\      
+      f(\textrm{Cap\_width}(M_n) + 1, \textrm{Stem\_height}(M_n) + 1, \textrm{Cap\_height}(M_n))  & n \textrm{ is even} \\
+      f(\textrm{Cap\_width}(M_n) + 1, \textrm{Stem\_height}(M_n) + 1, \textrm{Cap\_height}(M_n)+1) & n \textrm{ is odd}  \\      
    \end{cases}
 \]
 
@@ -129,7 +125,7 @@ Study the first five mushrooms carefully and make sure you can draw subsequent o
 \end{parts}
 
 \question
-    The \href{https://en.wikipedia.org/wiki/Fibonacci_number}{Fibonacci series} is an infinite sequence of integers, starting with $1$ and $2$ and defined recursively after that, for the $n$th term in the array, as $F_n = F_{n-1} + F_{n-2}$. In this problem, we will count an interesting set derived from the Fibonacci recurrence.
+    The \href{https://en.wikipedia.org/wiki/Fibonacci_number}{Fibonacci series} is an infinite sequence of integers, starting with $1$ and $2$ and defined recursively after that, for the $n$th term in the array, as $F(n) = F(n-1) + F(n-2)$. In this problem, we will count an interesting set derived from the Fibonacci recurrence.
     
 The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.html#section6.2}{Wythoff array} is an infinite 2D-array of integers where the $n$th row is formed from the Fibonnaci recurrence using starting numbers $n$ and $\left \lfloor{\phi\cdot (n+1)}\right \rfloor$ where $n \in \mathbb{N}$ and $\phi$ is the \href{https://en.wikipedia.org/wiki/Golden_ratio}{golden ratio} $1.618$ (3 sf).
 
