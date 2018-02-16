@@ -1,3 +1,22 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @sa03576
+ Sign out
+3
+0 4 HU-CS113-Spring-18/hw02
+forked from HU-CS113-master/hw02-spring18
+ Code  Pull requests 0  Projects 0  Wiki  Insights
+hw02/main.tex
+5c0af0b  an hour ago
+@waqarsaleem waqarsaleem Corrected formula for mushroom number
+@waqarsaleem @abdullahzafar
+     
+162 lines (121 sloc)  5.83 KB
 %CS-113 S18 HW-2
 %Released: 2-Feb-2018
 %Deadline: 16-Feb-2018 7.00 pm
@@ -13,13 +32,16 @@
 \runningheader{CS 113 Discrete Mathematics}{Homework II}{Spring 2018}
 \runningfooter{}{Page \thepage\ of \numpages}{}
 \firstpageheader{}{}{}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
 
 \boxedpoints
 \printanswers
 \usepackage[table]{xcolor}
 \usepackage{amsfonts,graphicx,amsmath,hyperref}
 \title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 2}
-\author{$<your ID>$}  % replace with your ID, e.g. oy02945
+\author{$sa03576$}   
 \date{Due: 19h, 16th February, 2018}
 
 
@@ -36,25 +58,23 @@
 
 \begin{parts}
 
- 
-  \part[5] Determine the domain, codomain and set of values for the following function to be 
-  \begin{subparts}
-  \subpart Partial
-  \subpart Total
-  \end{subparts}
-
+  
+  \part[5] Determine the domain, codomain and set of values for the following function to be 1) partial and 2) total: 
   \begin{center}
     $y=\sqrt{x}$
   \end{center}
 
   \begin{solution}
-    % Write your solution here
+    For the domain being all integers and the codomain being all real numbers the function would be partial. This is because in a set of all integers negative integers would also be present meaning that they would not map onto any element in the codomain
+    \newline \newline
+    However for the domain being all integers and the codomain consisting of both real and complex numbers the function would bee a total function as all values of the domain would map onto the values of the codomain
+    
   \end{solution}
   
   \part[5] Explain whether $f$ is a function from the set of all bit strings to the set of integers if $f(S)$ is the smallest $i \in \mathbb{Z}$� such that the $i$th bit of S is 1 and $f(S) = 0$ when S is the empty string. 
   
   \begin{solution}
-    % Write your solution here
+    $f$ is not a proper function. This is because for a bit string comprising entirely of zeros the function wont be able to map onto anything 
   \end{solution}
 
   \part[15] For $X,Y \in S$, explain why (or why not) the following define an equivalence relation on $S$:
@@ -65,7 +85,11 @@
   \end{subparts}
 
   \begin{solution}
-    % Write your solution here
+    The first part does define an equivalence relation. This can be proved by the following: x implies x is true and y implies y is also true. If x and y have been in class together, y and x have been in class together is also true. Lastly if x and y have been in the same class and y and z have been in the same class then x and z would have also been in the same class.
+    \newline \newline
+    The second part also defines an equivalent relation as, x implies x and y implies y are true, x rhymes with y is equivalent to saying y rhymes with x and if x rhymes with y and y rhymes with z, x rhymes with z would also be true hence proving an equivalent relation.
+    \newline \newline
+    For the last part it does not show an equivalence relation. x being a $\subseteq$ of x is true and the same goes for y, meaning it is reflexive. It is transitive too since if x $\subseteq$ y and y $\subseteq$ z then x $\subseteq$ z is true. However this relation is not symmetric since unless x is equal to y, x $\subseteq$ y is true but y $\subseteq$ x is false 
   \end{solution}
 
 \end{parts}
@@ -73,7 +97,7 @@
 %Long questions (75)
 \question[15] Let $A = f^{-1}(B)$. Prove that $f(A) \subseteq B$.
   \begin{solution}
-    % Write your solution here
+    If we consider two elements i and j from the sets A and B, their relation ship can be written as $i = f^{-1}(j)$ and $j=f(i)$, this can be proved since $f(f^{-1}(j))=j$ hence $f(i) = f(f^{-1}(j))$ is equivalent to saying $f(i) = j$. Now since $j=f(i)$ is true we can say $j=f(i) \in B$ meaning $j=f(i) \subseteq B$. This will hold true for all elements in A and B hence proving $f(A) \subseteq B$.
   \end{solution}
 
 \question[15] Consider $[n] = \{1,2,3,...,n\}$ where $n \in \mathbb{N}$. Let $A$ be the set of subsets of $[n]$ that have even size, and let $B$ be the set of subsets of $[n]$ that have odd size. Establish a bijection from $A$ to $B$, thereby proving $|A| = |B|$. (Such a bijection is suggested below for $n = 3$) 
@@ -88,7 +112,9 @@
 \end{center}
 
   \begin{solution}
-    % Write your solution here
+    To go about proving that a bijection exists between A and B we have to consider what A and B encompass i.e. sets of even and odd length. If we consider an element n, n being equal to 3 for example as shown in the given series, if we remove n from any given set we get the set that it will map onto in the co-domain. Similarly if we add n to any given set that doesn't already contain n we get the set that it will map onto the co-domain
+    \newline \newline
+    The way this shows that a bijection exists is that every single time the element n is added or removed from a set it maps onto another set in the co-domain
   \end{solution}
   
 \question Mushrooms play a vital role in the biosphere of our planet. They also have recreational uses, such as in understanding the mathematical series below. A mushroom number, $M_n$, is a figurate number that can be represented in the form of a mushroom shaped grid of points, such that the number of points is the mushroom number. A mushroom consists of a stem and cap, while its height is the combined height of the two parts. Here is $M_5=23$:
@@ -121,11 +147,29 @@ Study the first five mushrooms carefully and make sure you can draw subsequent o
   \begin{parts}
     \part[15] Derive a closed-form for $M_n$ in terms of $n$.
   \begin{solution}
-    % Write your solution here
+   The dots in the stem of the mushrooms can be represented by the equation $2(n-1)$
+   as this holds true for the values n=1,2,3,4,5
+   \newline \newline 
+   The dots present in the cap can be represented by finding two equations one that represents the height of the cap and another that shows its width
+   \newline \newline
+   Cap height= $\ceil{(n+1)/2}$, this can be seen as the height progresses as 1,2,2,3,3....
+   \newline \newline
+   Cap width= $n+1$, this can be seen as the width is simply one more than n, i.e. $n+1$
+   \newline \newline
+   The amount of dots in the cap can be represented by the arithmetic progression
+   \newline $S_n= n/2 * (a+l)$
+   \newline \newline Where a = cap width, n = cap height and d is the difference in number of the amount of dots on each part for the cap i.e. -1
+   \newline \newline 
+   And l is equal to  $(n+1)+(\ceil{(n+1)/2}-1)(-1)$
+   \newline \newline
+   Finally the equation becomes $ (($\ceil{(n+1)/2}$)/2 * ($n+1$+$(n+1)+(\ceil{(n+1)/2}-1)(-1)$))+2(n-1)$
   \end{solution}
+    
+    
     \part[5] What is the total height of the $20$th mushroom in the series? 
   \begin{solution}
-    % Write your solution here
+    The total height would be height  of stem + cap height is 
+    30
   \end{solution}
 \end{parts}
 
@@ -153,15 +197,27 @@ The \href{http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibGen.ht
   \part[10] To begin, prove that the Fibonacci series is countable.
  
     \begin{solution}
-    % Write your solution here
+    To prove that the series is countable we need to show that it is both surjective and injective. To show that it is in fact surjective we can map each value of the series to a real number starting from one going on in the positive axis for example f(1) is the first term, f(2) is the second term etc, where each number of the series is mapped onto a unique real number i.e. no two values of the series are mapped onto the same number. We can prove that no two values of the series will be mapped on to the same integer as each value of the series from the third value on wards is  sum of the previous two values. Since it is surjective and injective it is also bijective and since it can be mapped onto all real positive numbers one on wards it is countable
   \end{solution}
-  \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Modified Wythoff Array is countable. 
+  \part[15] Consider the Modified Wythoff as any array derived from the original, where each entry of the leading diagonal (marked in blue) of the original 2D-Array is replaced with an integer that does not occur in that row. Prove that the Wythoff Array is countable. 
 
   \begin{solution}
-    % Write your solution here
+   The Wythoff series can be considered as rows containing different modified versions of the Fibonacci series. Since we proved that the Fibonacci series is countable each of these rows are also countable. By taking the Cartesian product of each row in the Wythoff series we obtain a tuple which consists of the row and column number for each number of the Wythoff array. Since each of the Wythoff array numbers are mapped onto unique coordinates in terms of rows and columns and each number is unique to their row, this implies a bijection. Since each number of the array is mapped onto coordinates, coordinates being real positive numbers, we know that a series of real positive numbers is countable we can say that the array is countable
   \end{solution}
 \end{parts}
 
 \end{questions}
 
 \end{document}
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
